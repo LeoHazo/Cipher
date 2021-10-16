@@ -21,10 +21,15 @@ namespace Cipher
 
                 Console.WriteLine(""); // This just prints a blank line to make the test less cramped
                 Console.WriteLine($"Welcome 007! Do you need to Encrypt or Decrypt a secret message?");
-                Console.Write($"1- Encrypt{ Environment.NewLine}2- Decrypt{Environment.NewLine}3- Exit{Environment.NewLine}Enter your choice: ");
+                Console.WriteLine($"1- Encrypt");
+                Console.WriteLine($"2- Decrypt");
+                Console.WriteLine($"3- Exit");
+                Console.Write($"Enter your choice: ");
 
                 choice = Console.ReadLine();
 
+                //TODO Use a switch statement on the variable 'choice' to perform the appropriate action depedning on input
+                //Hint: Your default action should let the user know that they entered the wrong choice
                 switch (choice)
                 {
                     case "1":
@@ -33,7 +38,7 @@ namespace Cipher
                         message = Console.ReadLine();
 
                         //TODO Call the Encrypt method
-                        string encyptedMessage = cipher.Encrypt(message);
+                        string encyptedMessage = cipher.Encrypt(message.ToLower());
 
                         //TODO Display the encrypted (or error ) message 
                         //Hint Pass in an all lower case string
@@ -47,7 +52,7 @@ namespace Cipher
 
                         //TODO Call the Decrypt Method
                         //Hint Pass in an all lower case string
-                        string decyptedMessage = cipher.Decrypt(message);
+                        string decyptedMessage = cipher.Decrypt(message.ToLower());
 
                         //TODO Display the decrypted (or error ) message 
                         Console.WriteLine(decyptedMessage);
