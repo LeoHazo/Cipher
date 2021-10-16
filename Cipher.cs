@@ -25,7 +25,7 @@ namespace Cipher
             /* TODO Create a loop that traverses through every character in the message you want to encrypt
               In the body of the loop ( between the { and } ) perform the following:
               1- find the index location of the current character in the Alphabet string and save it to a variable
-              2- Using the index you found retrieve the subsitution charachter from Subsitute and save it to a variable
+              2- Using the index you found retrieve the substitution character from Substitute and save it to a variable
               3- Concatenate the value of the variable in step 2 to the first variable you created to save the encrypted message
             */
             foreach (char c in messageToEncrypt)
@@ -41,7 +41,7 @@ namespace Cipher
 
         public string Decrypt(string messageToDecrypt)
         {
-            //TODO perform the opposite subsitution of Encrypt
+            //TODO perform the opposite substitution of Encrypt
 
             string decryptedMessage = "";
             foreach (char c in messageToDecrypt)

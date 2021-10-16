@@ -18,12 +18,12 @@ namespace Cipher
 
             Cipher cipher = new Cipher();
             string choice = "";
-            string message = "";
+            string message;
 
             while (choice != "3")
             {
 
-                Console.WriteLine(""); // This just prints a blank line to make the test less cramped
+                Console.WriteLine(""); // This just prints a blank line to make the text less congested
                 Console.WriteLine($"Welcome 007! Do you need to Encrypt or Decrypt a secret message?");
                 Console.WriteLine($"1- Encrypt");
                 Console.WriteLine($"2- Decrypt");
@@ -32,13 +32,13 @@ namespace Cipher
 
                 choice = Console.ReadLine();
 
-                //TODO Use a switch statement on the variable 'choice' to perform the appropriate action depedning on input
+                //TODO Use a switch statement on the variable 'choice' to perform the appropriate action depending on input
                 //Hint: Your default action should let the user know that they entered the wrong choice
                 switch (choice)
                 {
                     case "1":
                         //TODO Get the input form the user
-                        Console.Write("Please type your unecrypted message: ");
+                        Console.Write("Please type your unencrypted message: ");
                         message = Console.ReadLine();
 
                         //TODO Call the Encrypt method
@@ -51,7 +51,7 @@ namespace Cipher
 
                     case "2":
                         //TDOD Get the input form the user
-                        Console.Write("Please type your ecrypted message: ");
+                        Console.Write("Please type your encrypted message: ");
                         message = Console.ReadLine();
 
                         //TODO Call the Decrypt Method
