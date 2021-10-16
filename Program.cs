@@ -1,8 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks; 
+﻿/*
+ * Programming 101 - Fall 2021
+ * Code By : Leo Hazou
+ * Date: 10/16/2021
+ * */
+
+
+using System;
+
 
 namespace Cipher
 {
@@ -14,26 +18,31 @@ namespace Cipher
 
             Cipher cipher = new Cipher();
             string choice = "";
-            string message = "";
+            string message;
 
             while (choice != "3")
             {
 
-                Console.WriteLine(""); // This just prints a blank line to make the test less cramped
+                Console.WriteLine(""); // This just prints a blank line to make the text less congested
                 Console.WriteLine($"Welcome 007! Do you need to Encrypt or Decrypt a secret message?");
-                Console.Write($"1- Encrypt{ Environment.NewLine}2- Decrypt{Environment.NewLine}3- Exit{Environment.NewLine}Enter your choice: ");
+                Console.WriteLine($"1- Encrypt");
+                Console.WriteLine($"2- Decrypt");
+                Console.WriteLine($"3- Exit");
+                Console.Write($"Enter your choice: ");
 
                 choice = Console.ReadLine();
 
+                //TODO Use a switch statement on the variable 'choice' to perform the appropriate action depending on input
+                //Hint: Your default action should let the user know that they entered the wrong choice
                 switch (choice)
                 {
                     case "1":
                         //TODO Get the input form the user
-                        Console.Write("Please type your unecrypted message: ");
+                        Console.Write("Please type your unencrypted message: ");
                         message = Console.ReadLine();
 
                         //TODO Call the Encrypt method
-                        string encyptedMessage = cipher.Encrypt(message);
+                        string encyptedMessage = cipher.Encrypt(message.ToLower());
 
                         //TODO Display the encrypted (or error ) message 
                         //Hint Pass in an all lower case string
@@ -42,12 +51,12 @@ namespace Cipher
 
                     case "2":
                         //TDOD Get the input form the user
-                        Console.Write("Please type your ecrypted message: ");
+                        Console.Write("Please type your encrypted message: ");
                         message = Console.ReadLine();
 
                         //TODO Call the Decrypt Method
                         //Hint Pass in an all lower case string
-                        string decyptedMessage = cipher.Decrypt(message);
+                        string decyptedMessage = cipher.Decrypt(message.ToLower());
 
                         //TODO Display the decrypted (or error ) message 
                         Console.WriteLine(decyptedMessage);
