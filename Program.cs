@@ -2,6 +2,8 @@
  * Programming 101 - Fall 2021
  * Code By : Leo Hazou
  * Date: 10/16/2021
+ * Group #
+ * Members:
  * */
 
 
@@ -34,45 +36,8 @@ namespace Cipher
 
                 //TODO Use a switch statement on the variable 'choice' to perform the appropriate action depending on input
                 //Hint: Your default action should let the user know that they entered the wrong choice
-                switch (choice)
-                {
-                    case "1":
-                        //TODO Get the input form the user
-                        Console.Write("Please type your unencrypted message: ");
-                        message = Console.ReadLine();
-
-                        //TODO Call the Encrypt method
-                        string encyptedMessage = cipher.Encrypt(message.ToLower());
-
-                        //TODO Display the encrypted (or error ) message 
-                        //Hint Pass in an all lower case string
-                        Console.WriteLine(encyptedMessage);
-                        break;
-
-                    case "2":
-                        //TDOD Get the input form the user
-                        Console.Write("Please type your encrypted message: ");
-                        message = Console.ReadLine();
-
-                        //TODO Call the Decrypt Method
-                        //Hint Pass in an all lower case string
-                        string decyptedMessage = cipher.Decrypt(message.ToLower());
-
-                        //TODO Display the decrypted (or error ) message 
-                        Console.WriteLine(decyptedMessage);
-
-                        break;
-
-                    case "3":
-                        Console.WriteLine("Farewell 007!");
-                        break;
-                    default:
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Invalid choice. Please Try again.");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        break;
-
-                }
+                
+                // <<<<< Start code here >>>>>
             }
 
             Console.ReadKey();
